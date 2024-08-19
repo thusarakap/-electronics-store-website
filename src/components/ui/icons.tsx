@@ -283,57 +283,57 @@ export function SmartphoneIcon(
 }
 
 export function TvIcon(
-    props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
-  ) {
-    return (
-        <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <rect width="20" height="15" x="2" y="7" rx="2" ry="2" />
-        <polyline points="17 2 12 7 7 2" />
-      </svg>
-    );
-  }
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="20" height="15" x="2" y="7" rx="2" ry="2" />
+      <polyline points="17 2 12 7 7 2" />
+    </svg>
+  );
+}
 
-  export function GamepadIcon(
-    props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
-  ) {
-    return (
-        <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <line x1="6" x2="10" y1="12" y2="12" />
-        <line x1="8" x2="8" y1="10" y2="14" />
-        <line x1="15" x2="15.01" y1="13" y2="13" />
-        <line x1="18" x2="18.01" y1="11" y2="11" />
-        <rect width="20" height="12" x="2" y="6" rx="2" />
-      </svg>
-    );
-  }
-  
-  export function TabletIcon(
-    props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
-  ) {
-    return (
-        <svg
+export function GamepadIcon(
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="6" x2="10" y1="12" y2="12" />
+      <line x1="8" x2="8" y1="10" y2="14" />
+      <line x1="15" x2="15.01" y1="13" y2="13" />
+      <line x1="18" x2="18.01" y1="11" y2="11" />
+      <rect width="20" height="12" x="2" y="6" rx="2" />
+    </svg>
+  );
+}
+
+export function TabletIcon(
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
+  return (
+    <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -348,69 +348,92 @@ export function TvIcon(
       <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
       <line x1="12" x2="12.01" y1="18" y2="18" />
     </svg>
-    );
-  }
+  );
+}
 
-  export function WearablesIcon(
-    props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
-  ) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 32 32"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M21,25H11c-2.2,0-4-1.8-4-4V11c0-2.2,1.8-4,4-4h10c2.2,0,4,1.8,4,4v10C25,23.2,23.2,25,21,25z" />
-        <path d="M23,7H9l0.7-4.3c0.2-1,1-1.7,2-1.7h8.6c1,0,1.8,0.7,2,1.7L23,7z" />
-        <path d="M20.3,31h-8.6c-1,0-1.8-0.7-2-1.7L9,25h14l-0.7,4.3C22.1,30.3,21.3,31,20.3,31z" />
-        <polyline points="11,19 14,19 17,12 19,16 21,16" />
-      </svg>
-    );
-  }
-  
-  export function MailOpenIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z" />
-        <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
-      </svg>
-    )
-  }
+export function WearablesIcon(
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21,25H11c-2.2,0-4-1.8-4-4V11c0-2.2,1.8-4,4-4h10c2.2,0,4,1.8,4,4v10C25,23.2,23.2,25,21,25z" />
+      <path d="M23,7H9l0.7-4.3c0.2-1,1-1.7,2-1.7h8.6c1,0,1.8,0.7,2,1.7L23,7z" />
+      <path d="M20.3,31h-8.6c-1,0-1.8-0.7-2-1.7L9,25h14l-0.7,4.3C22.1,30.3,21.3,31,20.3,31z" />
+      <polyline points="11,19 14,19 17,12 19,16 21,16" />
+    </svg>
+  );
+}
 
-  export function LinkIcon(
-    props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
-  ) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-      </svg>
-    );
-  }
+export function MailOpenIcon(
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z" />
+      <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
+    </svg>
+  );
+}
+
+export function LinkIcon(
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+    </svg>
+  );
+}
+
+export function PhoneIcon(
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
+  );
+}
