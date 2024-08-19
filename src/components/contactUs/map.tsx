@@ -1,6 +1,6 @@
-import { Card, CardContent } from "@components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
-import { MailOpenIcon, PhoneIcon, LinkIcon } from "@components/ui/icons";
+import { MailOpenIcon, LinkIcon, PhoneIcon } from "@/components/ui/icons";
 
 export function MapWithLinks() {
   return (
