@@ -2,11 +2,12 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { MapWithLinks } from "@/components/contactUs/map"
 
 export default function ContactUs() {
   return (
     <div className="w-full">
-        <h1 className="text-6xl font-bold text-center pb-10">Contact Us</h1>
+        <h1 className="text-6xl font-bold text-center my-20">Contact Us</h1>
         <section className="w-full bg-muted py-12 md:py-20 px-6 md:px-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">Registration Form</h2>
@@ -41,6 +42,7 @@ export default function ContactUs() {
             </form>
           </div>
         </section>
+        <MapWithLinks />
         </div>
   )
 }
