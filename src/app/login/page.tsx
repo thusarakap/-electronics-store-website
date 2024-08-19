@@ -1,21 +1,32 @@
 "use client";
 
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { FacebookIcon, GoogleIcon } from "@/components/ui/icons";
 import { MouseEvent } from "react";
-
+import { Checkbox } from "@/components/ui/checkbox";
+import Link from "next/link";
 
 export default function Login() {
-  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement, MouseEvent>, targetUrl: string) => {
+  const handleLinkClick = (
+    e: MouseEvent<HTMLAnchorElement, MouseEvent>,
+    targetUrl: string
+  ) => {
     e.preventDefault();
     const form = document.querySelector(".form") as HTMLElement;
     form.classList.add("fade-out");
     setTimeout(() => {
-      window.location.href = targetUrl; 
-    }, 200); 
+      window.location.href = targetUrl;
+    }, 200);
   };
 
   return (
@@ -24,26 +35,58 @@ export default function Login() {
         <Card className="w-full max-w-md p-6 login-form fade-in">
           <CardHeader>
             <CardTitle className="text-2xl font-bold">Login</CardTitle>
-            <CardDescription>Enter your username and password to access your account.</CardDescription>
+            <CardDescription>
+              Enter your username and password to access your account.
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="username">Username</Label>
-              <Input id="username" type="text" placeholder="Enter your username" aria-label="Username" required />
+              <Label htmlFor="username">Email</Label>
+              <Input
+                id="username"
+                type="text"
+                placeholder="Enter your Email"
+                aria-label="Username"
+                required
+              />
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
-              <Input id="password" type="password" placeholder="Enter your password" aria-label="Password" required />
+              <Input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+                aria-label="Password"
+                required
+              />
+
+              <div className="flex pt-1 w-full justify-between">
+                <Label className="flex items-center gap-2">
+                  <Checkbox />
+                  Remember me
+                </Label>
+                <Label className="flex items-center gap-2">
+                  <Link href="#" className="hover:underline">
+                    Forgot password?
+                  </Link>
+                </Label>
+              </div>
             </div>
           </CardContent>
           <CardFooter className="flex justify-end">
-            <Button type="submit" className="w-full">
-              Login
-            </Button>
+            <Link href="/dashboard" className="w-full" prefetch={false}>
+              <Button type="submit" className="w-full">
+                Login
+              </Button>
+            </Link>
           </CardFooter>
           <p className="message text-center mt-2">
             Not registered?{" "}
-            <a href="/signup" className="underline" onClick={(e) => handleLinkClick(e, "/signup")}>
+            <a
+              href="/signup"
+              className="underline"
+              onClick={(e) => handleLinkClick(e, "/signup")}
+            >
               Sign Up
             </a>
           </p>
