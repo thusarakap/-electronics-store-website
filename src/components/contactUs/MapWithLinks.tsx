@@ -8,10 +8,25 @@ export function MapWithLinks() {
       <div className="container mx-auto max-w-6xl px-4 md:px-6">
         <div className="space-y-4">
           <h2 className="text-2xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Get in Touch
+            Visit us
           </h2>
           <p className="text-muted-foreground md:text-xl">
-            Feel free to reach out to me if you have any questions :)
+            Please feel free to drop in at anytime :)
+          </p>
+          <h3 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-3xl">
+            Address
+          </h3>
+          <p className="text-muted-foreground md:text-xl font-semibold">
+            226/6/2, Narangaskumbura Road
+          </p>
+          <p className="text-muted-foreground md:text-xl font-semibold">
+            Kandy
+          </p>
+          <p className="text-muted-foreground md:text-xl font-semibold">
+            Sri Lanka
+          </p>
+          <p className="text-muted-foreground md:text-xl font-semibold">
+            20032
           </p>
         </div>
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -83,7 +98,7 @@ export function MapWithLinks() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31660.211944009832!2d80.60518192285858!3d7.294587401966095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae366266498acd3%3A0x411a3818a1e03c35!2sKandy!5e0!3m2!1sen!2slk!4v1720556395989!5m2!1sen!2slk"
             loading="lazy"
             width="100%"
-            height="350"
+            height="450"
             style={{ border: 0 }}
             aria-hidden="false"
             className="rounded-lg shadow-lg"
