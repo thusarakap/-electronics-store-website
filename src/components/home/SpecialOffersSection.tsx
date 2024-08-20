@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import Image from "next/image";
 
 export function SpecialOffersSection() {
   return (
@@ -81,7 +82,7 @@ export function SpecialOffersSection() {
           </Card>
           <Card className="bg-background shadow-lg">
             <CardHeader>
-              <img
+              <Image
                 src="/home/discounts.jpg"
                 width={300}
                 height={300}
