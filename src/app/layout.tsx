@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
+import { CartProvider } from "./context/CartContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,11 +27,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <CartProvider>
           <Navbar />
           <main className="flex-grow flex items-center justify-center">
           {children}
           </main>
           <Footer />
+          </CartProvider>
         </ThemeProvider>
         
       </body>
