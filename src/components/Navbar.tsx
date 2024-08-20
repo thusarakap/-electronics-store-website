@@ -10,10 +10,11 @@ import {
 } from "@/components/ui/icons";
 import { ModeToggle } from "@/components/ui/themeToggle";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useState } from "react";
+import { useCart } from "../app/context/CartContext";
 
 export function Navbar() {
-  const [cart, setCart] = useState<any[]>([]);
+  const { cart } = useCart();
+
   return (
     <header className="bg-background border-b">
       <div className="container flex items-center justify-between h-16 px-4 md:px-6">
@@ -45,25 +46,25 @@ export function Navbar() {
           </Link>
         </nav>
         <div className="flex items-center gap-2">
-
           <ModeToggle />
 
-          <Button variant="ghost" size="icon">
-            <Link href="/login" prefetch={false}>
+          <Link href="/login" prefetch={false}>
+            <Button variant="ghost" size="icon">
               <UserIcon className="h-5 w-5" />
               <span className="sr-only">Account</span>
-            </Link>
-          </Button>
+            </Button>
+          </Link>
 
-          <Button className="relative" variant="ghost" size="icon">
-            <Link href="/cart" prefetch={false}>
+          <Link href="/cart" prefetch={false}>
+            <Button className="relative" variant="ghost" size="icon">
               <ShoppingCartIcon className="w-5 h-5" />
               <span className="absolute -top-0 -right-0 bg-accent text-accent-foreground rounded-full px-1.5 py-0.5 text-xs font-medium">
                 {cart.length}
               </span>
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
+
         <Sheet>
           <SheetTrigger asChild>
             <Button
@@ -84,6 +85,7 @@ export function Navbar() {
               >
                 Home
               </Link>
+
               <Link
                 href="/products"
                 className="flex w-full items-center py-3 text-2xl font-semibold"
@@ -91,6 +93,7 @@ export function Navbar() {
               >
                 Products
               </Link>
+
               <Link
                 href="/contact-us"
                 className="flex w-full items-center py-3 text-2xl font-semibold"
@@ -98,22 +101,25 @@ export function Navbar() {
               >
                 Contact Us
               </Link>
+
               <div className="flex items-center gap-2">
                 <ModeToggle />
-                <Button variant="ghost" size="icon">
-                  <Link href="/login" prefetch={false}>
+
+                <Link href="/login" prefetch={false}>
+                  <Button variant="ghost" size="icon">
                     <UserIcon className="h-5 w-5" />
                     <span className="sr-only">Account</span>
-                  </Link>
-                </Button>
-                <Button className="relative" variant="ghost" size="icon">
-                  <Link href="/cart" prefetch={false}>
+                  </Button>
+                </Link>
+
+                <Link href="/cart" prefetch={false}>
+                  <Button className="relative" variant="ghost" size="icon">
                     <ShoppingCartIcon className="w-5 h-5" />
                     <span className="absolute -top-0 -right-0 bg-accent text-accent-foreground rounded-full px-1.5 py-0.5 text-xs font-medium">
                       {cart.length}
                     </span>
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </div>
             </div>
           </SheetContent>
