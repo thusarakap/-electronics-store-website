@@ -22,6 +22,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import Link from "next/link";
 
 export default function SignUp() {
   const handleLinkClick = (
@@ -37,7 +38,7 @@ export default function SignUp() {
       window.location.href = targetUrl;
     }, 200);
   };
-  
+
   return (
     <div>
       <div className="form">
@@ -187,9 +188,11 @@ export default function SignUp() {
             </div>
           </CardContent>
           <CardFooter className="flex justify-end">
-            <Button type="submit" className="w-full">
-              Sign Up
-            </Button>
+            <Link href="/user" className="w-full" prefetch={false}>
+              <Button type="submit" className="w-full">
+                Sign Up
+              </Button>
+            </Link>
           </CardFooter>
           <p className="message text-center mt-1">
             Already registered?{" "}
