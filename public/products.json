@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Apple AirPods Pro",
+    "description": "Active noise cancellation, transparency mode, and a customizable fit.",
+    "price": 67999,
+    "category": "Headphones",
+    "brand": "Apple",
+    "image": "/products/airpods-pro.jpeg",
+    "rating": 4.8
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S24 Ultra",
+    "description": "Flagship smartphone with a 200MP camera and S Pen support.",
+    "price": 329900,
+    "category": "Smartphones",
+    "brand": "Samsung",
+    "image": "/products/galaxy-s24-ultra.webp",
+    "rating": 4.8
+  },
+  {
+    "id": 3,
+    "name": "Sony WH-1000XM4",
+    "description": "Industry-leading noise-canceling headphones with 30-hour battery life.",
+    "price": 84000,
+    "category": "Headphones",
+    "brand": "Sony",
+    "image": "/products/wh-1000xm4.jpg",
+    "rating": 4.8
+  },
+  {
+    "id": 4,
+    "name": "LG OLED C1 Series 65” 4K TV",
+    "description": "Stunning OLED display with deep blacks and vibrant colors.",
+    "price": 899999,
+    "category": "Televisions",
+    "brand": "LG",
+    "image": "/products/lg-oled-c1.avif",
+    "rating": 4.8
+  },
+  {
+    "id": 5,
+    "name": "Apple MacBook Pro 14” M1 Pro",
+    "description": "Powerful laptop with the M1 Pro chip and Liquid Retina XDR display.",
+    "price": 784000,
+    "category": "Laptops",
+    "brand": "Apple",
+    "image": "/products/macbook-pro-14.jpg",
+    "rating": 4.8
+  },
+  {
+    "id": 6,
+    "name": "Google Nest Hub Max",
+    "description": "Smart display with Google Assistant and a 10-inch screen.",
+    "price": 92560,
+    "category": "Smart Home",
+    "brand": "Google",
+    "image": "/products/nest-hub-max.jpg",
+    "rating": 4.8
+  },
+  {
+    "id": 7,
+    "name": "Sony PlayStation 5",
+    "description": "Next-gen gaming console with 4K gaming and ultra-fast SSD.",
+    "price": 179990,
+    "category": "Gaming Consoles",
+    "brand": "Sony",
+    "image": "/products/playstation-5.jpg",
+    "rating": 4.8
+  },
+  {
+    "id": 8,
+    "name": "Apple iPad Air (4th Generation)",
+    "description": "10.9-inch Liquid Retina display with A14 Bionic chip.",
+    "price": 205990,
+    "category": "Tablets",
+    "brand": "Apple",
+    "image": "/products/ipad-air-4.jpg",
+    "rating": 4.8
+  },
+  {
+    "id": 9,
+    "name": "Amazon Echo Dot (4th Gen)",
+    "description": "Smart speaker with Alexa and a compact design.",
+    "price": 49.99,
+    "category": "Smart Home",
+    "brand": "Amazon",
+    "image": "/echo-dot-4.svg",
+    "rating": 4.8
+  },
+  {
+    "id": 10,
+    "name": "Bose SoundLink Revolve+",
+    "description": "Portable Bluetooth speaker with 360-degree sound.",
+    "price": 299.99,
+    "category": "Speakers",
+    "brand": "Bose",
+    "image": "/soundlink-revolve-plus.svg",
+    "rating": 4.8
+  },
+  {
+    "id": 11,
+    "name": "Microsoft Surface Laptop 4",
+    "description": "Ultra-thin laptop with a 13.5-inch PixelSense touchscreen display.",
+    "price": 999.99,
+    "category": "Laptops",
+    "brand": "Microsoft",
+    "image": "/surface-laptop-4.svg",
+    "rating": 4.8
+  },
+  {
+    "id": 12,
+    "name": "Roku Streaming Stick 4K",
+    "description": "4K HDR streaming with a simple interface and voice remote.",
+    "price": 49.99,
+    "category": "Streaming Devices",
+    "brand": "Roku",
+    "image": "/roku-streaming-stick-4k.svg",
+    "rating": 4.8
+  },
+  {
+    "id": 13,
+    "name": "Dyson V11 Torque Drive",
+    "description": "Cordless vacuum cleaner with powerful suction and intelligent cleaning modes.",
+    "price": 699.99,
+    "category": "Home Appliances",
+    "brand": "Dyson",
+    "image": "/dyson-v11.svg",
+    "rating": 4.8
+  },
+  {
+    "id": 14,
+    "name": "Canon EOS R5 Mirrorless Camera",
+    "description": "45MP full-frame sensor with 8K video recording.",
+    "price": 3899.99,
+    "category": "Cameras",
+    "brand": "Canon",
+    "image": "/eos-r5.svg",
+    "rating": 4.8
+  },
+  {
+    "id": 15,
+    "name": "Apple Watch Series 7",
+    "description": "Smartwatch with a larger display and advanced health features.",
+    "price": 429.99,
+    "category": "Wearables",
+    "brand": "Apple",
+    "image": "/apple-watch-series-7.svg",
+    "rating": 4.8
+  },
+  {
+    "id": 16,
+    "name": "Nintendo Switch",
+    "description": "Hybrid gaming console for home and on-the-go play.",
+    "price": 299.99,
+    "category": "Gaming Consoles",
+    "brand": "Nintendo",
+    "image": "/nintendo-switch.svg",
+    "rating": 4.8
+  },
+  {
+    "id": 17,
+    "name": "Jabra Elite 85t",
+    "description": "True wireless earbuds with adjustable noise cancellation.",
+    "price": 229.99,
+    "category": "Headphones",
+    "brand": "Jabra",
+    "image": "/jabra-elite-85t.svg",
+    "rating": 4.8
+  },
+  {
+    "id": 18,
+    "name": "Samsung Galaxy Watch 5",
+    "description": "Smartwatch with fitness tracking and ECG monitoring.",
+    "price": 249.99,
+    "category": "Wearables",
+    "brand": "Samsung",
+    "image": "/galaxy-watch-4.svg",
+    "rating": 4.8
+  },
+  {
+    "id": 19,
+    "name": "DJI Mavic Air 2",
+    "description": "Compact drone with 4K video and 34-minute flight time.",
+    "price": 799.99,
+    "category": "Drones",
+    "brand": "DJI",
+    "image": "/mavic-air-2.svg",
+    "rating": 4.8
+  },
+  {
+    "id": 20,
+    "name": "Logitech MX Master 3",
+    "description": "Advanced wireless mouse with customizable buttons and ergonomic design.",
+    "price": 99.99,
+    "category": "Accessories",
+    "brand": "Logitech",
+    "image": "/mx-master-3.svg",
+    "rating": 4.8
+  }
+]
