@@ -26,7 +26,7 @@ export function HeroSection() {
                 <CarouselItem>
                   <div className="relative overflow-hidden rounded-lg shadow-lg">
                     <img
-                      src="/head.jpg"
+                      src="/home/head.jpg"
                       alt="Featured Product"
                       width={600}
                       height={400}
@@ -36,14 +36,14 @@ export function HeroSection() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-primary-foreground">
                       <h3 className="text-xl font-bold">
-                        Wireless Noise-Cancelling Headphones
+                        Sony WH-1000XM4
                       </h3>
                       <p className="text-sm">
                         Experience immersive audio with our latest
                         noise-cancelling headphones.
                       </p>
                       <div className="mt-2 flex items-center justify-between">
-                        <span className="text-lg font-semibold">$199.99</span>
+                        <span className="text-lg font-semibold">Rs.84,000</span>
                         <Button size="sm">Shop Now</Button>
                       </div>
                     </div>
@@ -52,7 +52,7 @@ export function HeroSection() {
                 <CarouselItem>
                   <div className="relative overflow-hidden rounded-lg shadow-lg">
                     <img
-                      src="/monitor.jpg"
+                      src="/home/monitor.jpg"
                       alt="Featured Product"
                       width={600}
                       height={400}
@@ -62,14 +62,14 @@ export function HeroSection() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-primary-foreground">
                       <h3 className="text-xl font-bold">
-                        Ultrawide Gaming Monitor
+                        ROG 29&quot; Ultrawide Gaming Monitor
                       </h3>
                       <p className="text-sm">
                         Immerse yourself in your favorite games with our
                         ultrawide gaming monitor.
                       </p>
                       <div className="mt-2 flex items-center justify-between">
-                        <span className="text-lg font-semibold">$499.99</span>
+                        <span className="text-lg font-semibold">Rs.229,000</span>
                         <Button size="sm">Shop Now</Button>
                       </div>
                     </div>
@@ -78,7 +78,7 @@ export function HeroSection() {
                 <CarouselItem>
                   <div className="relative overflow-hidden rounded-lg shadow-lg">
                     <img
-                      src="/alexa.webp"
+                      src="/home/alexa.webp"
                       alt="Featured Product"
                       width={600}
                       height={400}
@@ -88,14 +88,13 @@ export function HeroSection() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-primary-foreground">
                       <h3 className="text-xl font-bold">
-                        Smart Home Assistant
+                        Alexa Echo Dot
                       </h3>
                       <p className="text-sm">
-                        Automate your home with our powerful smart home
-                        assistant.
+                        Automate your home with Alexa by Amazon.
                       </p>
                       <div className="mt-2 flex items-center justify-between">
-                        <span className="text-lg font-semibold">$99.99</span>
+                        <span className="text-lg font-semibold">Rs.30,000</span>
                         <Button size="sm">Shop Now</Button>
                       </div>
                     </div>
