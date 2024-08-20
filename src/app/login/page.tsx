@@ -60,21 +60,21 @@ export default function Login() {
                 required
               />
 
-              <div className="flex pt-1 w-full justify-between">
+              <div className="flex w-full justify-between">
                 <Label className="flex items-center gap-2">
                   <Checkbox />
                   Remember me
                 </Label>
-                <Label className="flex items-center gap-2">
+                <Button variant="link" className="text-primary-foreground flex items-center gap-2">
                   <Link href="#" className="hover:underline">
                     Forgot password?
                   </Link>
-                </Label>
+                </Button>
               </div>
             </div>
           </CardContent>
           <CardFooter className="flex justify-end">
-            <Link href="/dashboard" className="w-full" prefetch={false}>
+            <Link href="/user" className="w-full" prefetch={false}>
               <Button type="submit" className="w-full">
                 Login
               </Button>
