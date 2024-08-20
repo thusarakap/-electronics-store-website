@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Locate, Mail, Phone } from "lucide-react";
 
 export default function UserProfile() {
   const user = {
@@ -64,15 +65,15 @@ export default function UserProfile() {
             <div className="flex flex-col justify-center ml-6">
               <div className="text-3xl font-bold">{user.name}</div>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <MailIcon className="h-5 w-5" />
+                <Mail className="h-5 w-5" />
                 <span>{user.email}</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <PhoneIcon className="h-5 w-5" />
+                <Phone className="h-5 w-5" />
                 <span>{user.phone}</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <LocateIcon className="h-5 w-5" />
+                <Locate className="h-5 w-5" />
                 <span>{user.address}</span>
               </div>
             </div>
@@ -121,10 +122,10 @@ export default function UserProfile() {
                     <Badge className=" border-primary-foreground"
                       variant={
                         order.status === "Delivered"
-                          ? "success"
+                          ? "default"
                           : order.status === "Shipped"
-                          ? "info"
-                          : "warning"
+                          ? "secondary"
+                          : "destructive"
                       }
                     >
                       {order.status}
@@ -140,67 +141,5 @@ export default function UserProfile() {
         </div>
       </div>
     </div>
-  );
-}
-
-function LocateIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="2" x2="5" y1="12" y2="12" />
-      <line x1="19" x2="22" y1="12" y2="12" />
-      <line x1="12" x2="12" y1="2" y2="5" />
-      <line x1="12" x2="12" y1="19" y2="22" />
-      <circle cx="12" cy="12" r="7" />
-    </svg>
-  );
-}
-
-function MailIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="20" height="16" x="2" y="4" rx="2" />
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-    </svg>
-  );
-}
-
-function PhoneIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-    </svg>
   );
 }
