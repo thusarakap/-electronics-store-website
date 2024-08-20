@@ -302,9 +302,8 @@ export default function Products() {
             <div className="ml-4 flex items-center gap-2">
               <Button
                 variant="secondary"
-                className="px-2"
+                className={`px-2 ${sortBy === "low" ? "text-primary" : ""}`}
                 onClick={() => setSortBy("low")}
-                className={sortBy === "low" ? "text-primary" : ""}
               >
                 Price &nbsp;
                 <ArrowUp10 className="w-4 h-4" />
@@ -313,9 +312,8 @@ export default function Products() {
 
               <Button
                 variant="secondary"
-                className="px-2"
+                className={`px-2 ${sortBy === "high" ? "text-primary" : ""}`}
                 onClick={() => setSortBy("high")}
-                className={sortBy === "high" ? "text-primary" : ""}
               >
                 Price &nbsp;
                 <ArrowDown01 className="w-4 h-4" />
@@ -323,9 +321,8 @@ export default function Products() {
               </Button>
               <Button
                 variant="secondary"
-                className="px-2"
+                className={`px-2 ${sortBy === "newest" ? "text-primary" : ""}`}
                 onClick={() => setSortBy("newest")}
-                className={sortBy === "newest" ? "text-primary" : ""}
               >
                 Newest &nbsp;
                 <CalendarArrowUp className="w-4 h-4" />
@@ -333,9 +330,8 @@ export default function Products() {
               </Button>
               <Button
                 variant="secondary"
-                className="px-2"
+                className={`px-2 ${sortBy === "oldest" ? "text-primary" : ""}`}
                 onClick={() => setSortBy("oldest")}
-                className={sortBy === "oldest" ? "text-primary" : ""}
               >
                 Oldest &nbsp;
                 <CalendarArrowDown className="w-4 h-4" />
@@ -343,15 +339,15 @@ export default function Products() {
               </Button>
               <div className="ml-4 flex items-center gap-2">
               <Button
-                  variant={viewMode === "grid" ? "primary" : "ghost"}
-                  size="icon"
-                  onClick={() => setViewMode("grid")}
-                >
-                  <LayoutGrid className="w-4 h-4" />
-                  <span className="sr-only">Grid view</span>
-                </Button>
+                variant={viewMode === "grid" ? "secondary" : "ghost"}
+                size="icon"
+                onClick={() => setViewMode("grid")}
+              >
+                <LayoutGrid className="w-4 h-4" />
+                <span className="sr-only">Grid view</span>
+              </Button>
                 <Button
-                  variant={viewMode === "list" ? "primary" : "ghost"}
+                  variant={viewMode === "list" ? "secondary" : "ghost"}
                   size="icon"
                   onClick={() => setViewMode("list")}
                 >
@@ -399,7 +395,7 @@ export default function Products() {
                   <span className="text-lg font-bold">
                     Rs.{product.price.toLocaleString()}
                   </span>
-                  <Button className="px-3" onClick={() => addToCart(product)}>
+                  <Button className="px-3" onClick={() => addToCart({ ...product, quantity: 1 })}>
                     Add to Cart
                   </Button>
                 </div>
@@ -425,7 +421,7 @@ export default function Products() {
                     <p className="text-muted-foreground mb-4">{product.description}</p>
                     <div className="flex items-center justify-between">
                       <span className="text-lg font-bold">${product.price}</span>
-                      <Button className="px-3" onClick={() => addToCart(product)}>Add to Cart</Button>
+                      <Button className="px-3" onClick={() => addToCart({ ...product, quantity: 1 })}>Add to Cart</Button>
                     </div>
                   </div>
                 </div>
