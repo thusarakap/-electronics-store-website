@@ -4,7 +4,7 @@ import Link from "next/link";
 export function CategoriesSection () {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-          <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-6">
+          <div className="container grid grid-cols-1 md:grid-cols-2 gap-10 px-4 md:px-6">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Explore Our Categories</h2>
               <p className="text-muted-foreground md:text-xl">
@@ -78,8 +78,8 @@ export function CategoriesSection () {
             </div>
             <div className="flex justify-center">
               <img
-                src="/shoppingCategories.jpg"
-                width={500}
+                src="/home/shoppingCategories.jpg"
+                width={600}
                 height={500}
                 alt="Categories"
                 className="max-w-full h-auto rounded-lg shadow-lg"
