@@ -25,7 +25,7 @@ export function HeroSection() {
               <CarouselContent>
                 <CarouselItem>
                   <div className="relative overflow-hidden rounded-lg shadow-lg">
-                    <img
+                    <Image
                       src="/home/head.jpg"
                       alt="Featured Product"
                       width={600}
@@ -51,7 +51,7 @@ export function HeroSection() {
                 </CarouselItem>
                 <CarouselItem>
                   <div className="relative overflow-hidden rounded-lg shadow-lg">
-                    <img
+                    <Image
                       src="/home/monitor.jpg"
                       alt="Featured Product"
                       width={600}
@@ -77,7 +77,7 @@ export function HeroSection() {
                 </CarouselItem>
                 <CarouselItem>
                   <div className="relative overflow-hidden rounded-lg shadow-lg">
-                    <img
+                    <Image
                       src="/home/alexa.webp"
                       alt="Featured Product"
                       width={600}
