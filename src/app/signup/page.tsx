@@ -25,11 +25,11 @@ import {
 
 export default function SignUp() {
   const handleLinkClick = (
-    e: MouseEvent<HTMLAnchorElement, MouseEvent>,
+    e: MouseEvent<HTMLAnchorElement>,
     targetUrl: string
   ) => {
     e.preventDefault();
-    const form = document.querySelector(".form");
+    const form = document.querySelector(".form") as HTMLElement;
     if (form) {
       form.classList.add("fade-out");
     }
@@ -37,7 +37,7 @@ export default function SignUp() {
       window.location.href = targetUrl;
     }, 200);
   };
-
+  
   return (
     <div>
       <div className="form">
