@@ -1,17 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import Link from "next/link";
 
 export function SpecialOffersSection() {
   return (
     <section className="bg-muted/20 py-12 md:py-24">
       <div className="container">
-        <h2 className="text-2xl font-bold mb-8">Special Offers</h2>
+        <h2 className="text-4xl font-bold mb-3">Special Offers</h2>
+        <p className="text-muted-foreground md:text-xl mb-3">
+                Get amazing deals on the latest electronics and accessories!
+              </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <Card className="bg-background shadow-lg">
             <CardHeader>
               <img
-                src="/sale50.jpg"
+                src="/home/sale50.jpg"
                 width={300}
                 height={300}
                 alt="Offer"
@@ -34,7 +36,7 @@ export function SpecialOffersSection() {
           <Card className="bg-background shadow-lg">
             <CardHeader>
               <img
-                src="/freeDelivery.avif"
+                src="/home/freeDelivery.avif"
                 width={300}
                 height={300}
                 alt="Offer"
@@ -57,7 +59,7 @@ export function SpecialOffersSection() {
           <Card className="bg-background shadow-lg">
             <CardHeader>
               <img
-                src="/b1g1f.jpg"
+                src="/home/b1g1f.jpg"
                 width={300}
                 height={300}
                 alt="Offer"
@@ -80,7 +82,7 @@ export function SpecialOffersSection() {
           <Card className="bg-background shadow-lg">
             <CardHeader>
               <img
-                src="/discounts.jpg"
+                src="/home/discounts.jpg"
                 width={300}
                 height={300}
                 alt="Offer"
