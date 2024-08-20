@@ -18,7 +18,7 @@ import Link from "next/link";
 
 export default function Login() {
   const handleLinkClick = (
-    e: MouseEvent<HTMLAnchorElement, MouseEvent>,
+    e: MouseEvent<HTMLAnchorElement>,
     targetUrl: string
   ) => {
     e.preventDefault();
