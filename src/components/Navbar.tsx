@@ -11,6 +11,7 @@ import {
 import { ModeToggle } from "@/components/ui/themeToggle";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useCart } from "../app/context/CartContext";
+import { Zap } from "lucide-react";
 
 export function Navbar() {
   const { cart } = useCart();
@@ -19,7 +20,7 @@ export function Navbar() {
     <header className="bg-background border-b">
       <div className="container flex items-center justify-between h-16 px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <BoltIcon className="h-6 w-6 text-primary" />
+          <Zap className="h-6 w-6 text-primary" />
           <span className="text-xl font-semibold">Electro</span>
         </Link>
         <nav className="hidden md:flex items-center gap-4">
@@ -45,7 +46,7 @@ export function Navbar() {
             Contact Us
           </Link>
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="hidden md:flex items-center gap-2">
           <ModeToggle />
 
           <Link href="/login" prefetch={false}>
@@ -76,8 +77,14 @@ export function Navbar() {
               <MenuIcon className="h-6 w-6" />
             </Button>
           </SheetTrigger>
+          
           <SheetContent side="right">
-            <div className="grid gap-4 py-6">
+          <Link href="/" className="flex items-center gap-2" prefetch={false}>
+          <Zap className="h-6 w-6 text-primary" />
+          <span className="text-xl font-semibold">Electro</span>
+        </Link>
+            <div className="py-6">
+              <div className="ml-2">
               <Link
                 href="/"
                 className="flex w-full items-center py-3 text-2xl font-semibold"
@@ -85,6 +92,8 @@ export function Navbar() {
               >
                 Home
               </Link>
+
+              
 
               <Link
                 href="/products"
@@ -102,7 +111,9 @@ export function Navbar() {
                 Contact Us
               </Link>
 
-              <div className="flex items-center gap-2">
+              </div>
+
+              <div className="flex items-center gap-2 py-4">
                 <ModeToggle />
 
                 <Link href="/login" prefetch={false}>
