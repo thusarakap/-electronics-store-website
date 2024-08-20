@@ -13,6 +13,8 @@ import {
   ArrowUp10,
   CalendarArrowDown,
   CalendarArrowUp,
+  LayoutGrid,
+  List,
   Star,
 } from "lucide-react";
 interface Product {
@@ -40,6 +42,8 @@ export default function Products() {
   });
   const [searchTerm, setSearchTerm] = useState("");
   const [products, setProducts] = useState<Product[]>([]);
+  const [sortBy, setSortBy] = useState("high")
+  const [viewMode, setViewMode] = useState("grid")
 
   useEffect(() => {
     fetch("/products.json")
@@ -49,31 +53,37 @@ export default function Products() {
   }, []);
 
   const filteredProducts = useMemo(() => {
-    return products.filter((product) => {
-      if (
-        filters.category.length > 0 &&
-        !filters.category.includes(product.category)
-      ) {
-        return false;
-      }
-      if (filters.brand.length > 0 && !filters.brand.includes(product.brand)) {
-        return false;
-      }
-      if (
-        product.price < filters.priceRange[0] ||
-        product.price > filters.priceRange[1]
-      ) {
-        return false;
-      }
-      if (
-        searchTerm.length > 0 &&
-        !product.name.toLowerCase().includes(searchTerm.toLowerCase())
-      ) {
-        return false;
-      }
-      return true;
-    });
-  }, [filters, searchTerm, products]);
+    return products
+      .filter((product) => {
+        if (filters.category.length > 0 && !filters.category.includes(product.category)) {
+          return false
+        }
+        if (filters.brand.length > 0 && !filters.brand.includes(product.brand)) {
+          return false
+        }
+        if (product.price < filters.priceRange[0] || product.price > filters.priceRange[1]) {
+          return false
+        }
+        if (searchTerm.length > 0 && !product.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+          return false
+        }
+        return true
+      })
+      .sort((a, b) => {
+        switch (sortBy) {
+          case "low":
+            return a.price - b.price
+          case "high":
+            return b.price - a.price
+          case "newest":
+            return b.id - a.id
+          case "oldest":
+            return a.id - b.id
+          default:
+            return 0
+        }
+      })
+  }, [filters, searchTerm, sortBy, products])
 
   const { cart, addToCart } = useCart();
 
@@ -88,108 +98,151 @@ export default function Products() {
               <div className="space-y-2">
                 <Label className="flex items-center gap-2">
                   <Checkbox
-                    checked={filters.category.includes("Supplements")}
+                    checked={filters.category.includes("Smartphones")}
                     onCheckedChange={(checked) => {
                       setFilters({
                         ...filters,
                         category: checked
-                          ? [...filters.category, "Supplements"]
-                          : filters.category.filter((c) => c !== "Supplements"),
+                          ? [...filters.category, "Smartphones"]
+                          : filters.category.filter((c) => c !== "Smartphones"),
                       });
                     }}
                   />
-                  Supplements
+                  Smartphones
+                </Label>
+                <Label className="flex items-center gap-2">
+                  <Checkbox
+                    checked={filters.category.includes("Headphones")}
+                    onCheckedChange={(checked) => {
+                      setFilters({
+                        ...filters,
+                        category: checked
+                          ? [...filters.category, "Headphones"]
+                          : filters.category.filter((c) => c !== "Headphones"),
+                      });
+                    }}
+                  />
+                  Headphones
+                </Label>
+                <Label className="flex items-center gap-2">
+                  <Checkbox
+                    checked={filters.category.includes("Laptops")}
+                    onCheckedChange={(checked) => {
+                      setFilters({
+                        ...filters,
+                        category: checked
+                          ? [...filters.category, "Laptops"]
+                          : filters.category.filter((c) => c !== "Laptops"),
+                      });
+                    }}
+                  />
+                  Laptops
+                </Label>
+                <Label className="flex items-center gap-2">
+                  <Checkbox
+                    checked={filters.category.includes("Gaming Consoles")}
+                    onCheckedChange={(checked) => {
+                      setFilters({
+                        ...filters,
+                        category: checked
+                          ? [...filters.category, "Gaming Consoles"]
+                          : filters.category.filter((c) => c !== "Gaming Consoles"),
+                      });
+                    }}
+                  />
+                  Gaming Consoles
                 </Label>
               </div>
+              
             </div>
             <div>
               <h3 className="text-base font-medium mb-2">Brand</h3>
               <div className="space-y-2">
                 <Label className="flex items-center gap-2">
                   <Checkbox
-                    checked={filters.brand.includes("PetWell")}
+                    checked={filters.brand.includes("Apple")}
                     onCheckedChange={(checked) => {
                       setFilters({
                         ...filters,
                         brand: checked
-                          ? [...filters.brand, "PetWell"]
-                          : filters.brand.filter((b) => b !== "PetWell"),
+                          ? [...filters.brand, "Apple"]
+                          : filters.brand.filter((b) => b !== "Apple"),
                       });
                     }}
                   />
-                  PetWell
+                  Apple
                 </Label>
                 <Label className="flex items-center gap-2">
                   <Checkbox
-                    checked={filters.brand.includes("PawPerfect")}
+                    checked={filters.brand.includes("Samsung")}
                     onCheckedChange={(checked) => {
                       setFilters({
                         ...filters,
                         brand: checked
-                          ? [...filters.brand, "PawPerfect"]
-                          : filters.brand.filter((b) => b !== "PawPerfect"),
+                          ? [...filters.brand, "Samsung"]
+                          : filters.brand.filter((b) => b !== "Samsung"),
                       });
                     }}
                   />
-                  PawPerfect
+                  Samsung
                 </Label>
                 <Label className="flex items-center gap-2">
                   <Checkbox
-                    checked={filters.brand.includes("CatCare")}
+                    checked={filters.brand.includes("Sony")}
                     onCheckedChange={(checked) => {
                       setFilters({
                         ...filters,
                         brand: checked
-                          ? [...filters.brand, "CatCare"]
-                          : filters.brand.filter((b) => b !== "CatCare"),
+                          ? [...filters.brand, "Sony"]
+                          : filters.brand.filter((b) => b !== "Sony"),
                       });
                     }}
                   />
-                  CatCare
+                  Sony
                 </Label>
                 <Label className="flex items-center gap-2">
                   <Checkbox
-                    checked={filters.brand.includes("BunnyBest")}
+                    checked={filters.brand.includes("LG")}
                     onCheckedChange={(checked) => {
                       setFilters({
                         ...filters,
                         brand: checked
-                          ? [...filters.brand, "BunnyBest"]
-                          : filters.brand.filter((b) => b !== "BunnyBest"),
+                          ? [...filters.brand, "LG"]
+                          : filters.brand.filter((b) => b !== "LG"),
                       });
                     }}
                   />
-                  BunnyBest
+                  LG
                 </Label>
                 <Label className="flex items-center gap-2">
                   <Checkbox
-                    checked={filters.brand.includes("EquineEssentials")}
+                    checked={filters.brand.includes("Google")}
                     onCheckedChange={(checked) => {
                       setFilters({
                         ...filters,
                         brand: checked
-                          ? [...filters.brand, "EquineEssentials"]
+                          ? [...filters.brand, "Google"]
                           : filters.brand.filter(
-                              (b) => b !== "EquineEssentials"
+                              (b) => b !== "Google"
                             ),
                       });
                     }}
                   />
-                  EquineEssentials
+                  Google
                 </Label>
                 <Label className="flex items-center gap-2">
                   <Checkbox
-                    checked={filters.brand.includes("AvianAid")}
+                    checked={filters.brand.includes("Amazon")}
                     onCheckedChange={(checked) => {
                       setFilters({
                         ...filters,
                         brand: checked
-                          ? [...filters.brand, "AvianAid"]
-                          : filters.brand.filter((b) => b !== "AvianAid"),
+                          ? [...filters.brand, "Amazon"]
+                          : filters.brand.filter((b) => b !== "Amazon"),
                       });
                     }}
                   />
-                  AvianAid
+                  Amazon
                 </Label>
               </div>
             </div>
@@ -250,8 +303,8 @@ export default function Products() {
               <Button
                 variant="secondary"
                 className="px-2"
-                // onClick={() => setSortBy("low")}
-                // className={sortBy === "low" ? "text-primary" : ""}
+                onClick={() => setSortBy("low")}
+                className={sortBy === "low" ? "text-primary" : ""}
               >
                 Price &nbsp;
                 <ArrowUp10 className="w-4 h-4" />
@@ -261,8 +314,8 @@ export default function Products() {
               <Button
                 variant="secondary"
                 className="px-2"
-                // onClick={() => setSortBy("high")}
-                // className={sortBy === "high" ? "text-primary" : ""}
+                onClick={() => setSortBy("high")}
+                className={sortBy === "high" ? "text-primary" : ""}
               >
                 Price &nbsp;
                 <ArrowDown01 className="w-4 h-4" />
@@ -271,8 +324,8 @@ export default function Products() {
               <Button
                 variant="secondary"
                 className="px-2"
-                // onClick={() => setSortBy("newest")}
-                // className={sortBy === "newest" ? "text-primary" : ""}
+                onClick={() => setSortBy("newest")}
+                className={sortBy === "newest" ? "text-primary" : ""}
               >
                 Newest &nbsp;
                 <CalendarArrowUp className="w-4 h-4" />
@@ -281,15 +334,34 @@ export default function Products() {
               <Button
                 variant="secondary"
                 className="px-2"
-                // onClick={() => setSortBy("oldest")}
-                // className={sortBy === "oldest" ? "text-primary" : ""}
+                onClick={() => setSortBy("oldest")}
+                className={sortBy === "oldest" ? "text-primary" : ""}
               >
                 Oldest &nbsp;
                 <CalendarArrowDown className="w-4 h-4" />
                 <span className="sr-only">Sort by oldest</span>
               </Button>
+              <div className="ml-4 flex items-center gap-2">
+              <Button
+                  variant={viewMode === "grid" ? "primary" : "ghost"}
+                  size="icon"
+                  onClick={() => setViewMode("grid")}
+                >
+                  <LayoutGrid className="w-4 h-4" />
+                  <span className="sr-only">Grid view</span>
+                </Button>
+                <Button
+                  variant={viewMode === "list" ? "primary" : "ghost"}
+                  size="icon"
+                  onClick={() => setViewMode("list")}
+                >
+                  <List className="w-4 h-4" />
+                  <span className="sr-only">List view</span>
+                </Button>
+                </div>
             </div>
           </div>
+          {viewMode === "grid" ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredProducts.map((product) => (
               
@@ -313,15 +385,17 @@ export default function Products() {
                   {product.description}
                 </p>
 
+                
+                </Link>
+                <div className="mt-auto">
                 <div className="flex items-center text-lg gap-1">
                   <Star className="w-5 h-5" />
                   <span className="font-semibold">
                     {product.rating.toFixed(1)}
                   </span>
                 </div>
-                </Link>
-
                 <div className="flex items-center justify-between mt-auto">
+                  
                   <span className="text-lg font-bold">
                     Rs.{product.price.toLocaleString()}
                   </span>
@@ -330,9 +404,34 @@ export default function Products() {
                   </Button>
                 </div>
               </div>
+              </div>
               
             ))}
           </div>
+          ) : (
+            <div className="space-y-4">
+              {filteredProducts.map((product) => (
+                <div key={product.id} className="bg-muted p-4 rounded-lg shadow-sm flex items-center">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    width={100}
+                    height={100}
+                    className="w-24 h-24 object-cover rounded-lg mr-4"
+                    style={{ aspectRatio: "100/100", objectFit: "cover" }}
+                  />
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold mb-2">{product.name}</h3>
+                    <p className="text-muted-foreground mb-4">{product.description}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-lg font-bold">${product.price}</span>
+                      <Button className="px-3" onClick={() => addToCart(product)}>Add to Cart</Button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
