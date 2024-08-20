@@ -38,7 +38,7 @@ export default function ProductPage() {
     fetch(`/products.json`)
       .then((response) => response.json())
       .then((data: Product[]) => {
-        const foundProduct = data.find((product) => product.id === parseInt(id));
+        const foundProduct = data.find((product) => product.id === parseInt(id as string));
         if (foundProduct) {
           setProduct(foundProduct);
         } else {
