@@ -1,4 +1,5 @@
 import { LaptopIcon, SmartphoneIcon, HeadphonesIcon, CameraIcon, TvIcon, GamepadIcon, TabletIcon, WearablesIcon } from "@/components/ui/icons";
+import Image from "next/image";
 import Link from "next/link";
 
 export function CategoriesSection () {
@@ -77,7 +78,7 @@ export function CategoriesSection () {
               </div>
             </div>
             <div className="flex justify-center">
-              <img
+              <Image
                 src="/home/shoppingCategories.jpg"
                 width={600}
                 height={500}
