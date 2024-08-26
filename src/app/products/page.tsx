@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -367,7 +368,7 @@ export default function Products() {
               >
                 <Link className="flex flex-col" href={`/products/${product.id}`}>
                 
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.name}
                     width={300}
@@ -408,7 +409,7 @@ export default function Products() {
             <div className="space-y-4">
               {filteredProducts.map((product) => (
                 <div key={product.id} className="bg-muted p-4 rounded-lg shadow-sm flex items-center">
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.name}
                     width={100}

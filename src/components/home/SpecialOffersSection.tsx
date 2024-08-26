@@ -13,7 +13,7 @@ export function SpecialOffersSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <Card className="bg-background shadow-lg">
             <CardHeader>
-              <img
+              <Image
                 src="/home/sale50.jpg"
                 width={300}
                 height={300}
@@ -36,7 +36,7 @@ export function SpecialOffersSection() {
           </Card>
           <Card className="bg-background shadow-lg">
             <CardHeader>
-              <img
+              <Image
                 src="/home/freeDelivery.avif"
                 width={300}
                 height={300}
@@ -59,7 +59,7 @@ export function SpecialOffersSection() {
           </Card>
           <Card className="bg-background shadow-lg">
             <CardHeader>
-              <img
+              <Image
                 src="/home/b1g1f.jpg"
                 width={300}
                 height={300}

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { MinusIcon, PlusIcon, TrashIcon } from "@/components/ui/icons";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Cart() {
   const { cart, addToCart, removeFromCart } = useCart();
@@ -37,7 +38,7 @@ export default function Cart() {
           <div className="grid gap-6">
             {cart.map((item) => (
               <div key={item.id} className="grid grid-cols-[auto_1fr_auto] items-center gap-4">
-                <img
+                <Image
                   src={item.image || "/placeholder.svg"}
                   alt={item.name}
                   width={80}

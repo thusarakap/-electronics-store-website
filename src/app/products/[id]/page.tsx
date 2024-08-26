@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Heart, Minus, Plus, ShoppingCart, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import Image from "next/image";
 import { useCart } from "../../context/CartContext"; 
 
 interface Product {
@@ -67,7 +67,7 @@ export default function ProductPage() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-start py-8 md:py-12">
         <div className="grid gap-4 md:gap-8">
           <div className="grid gap-4">
-            <img
+            <Image
               src={product.image}
               alt="Product Image"
               width={800}
@@ -77,7 +77,7 @@ export default function ProductPage() {
             <div className="hidden md:grid grid-cols-5 gap-3">
               {[...Array(5)].map((_, index) => (
                 <button key={index} className="border hover:border-primary rounded-lg overflow-hidden transition-colors">
-                  <img
+                  <Image
                     src="/placeholder.svg"
                     alt={`Preview thumbnail ${index + 1}`}
                     width={100}
@@ -166,7 +166,7 @@ export default function ProductPage() {
               <div className="grid gap-4">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <img
+                    <Image
                       src="/ChamariPalliyeguru.webp"
                       alt="User Avatar"
                       width={48}
@@ -198,7 +198,7 @@ export default function ProductPage() {
         <Carousel>
           {relatedProducts.map((product) => (
             <CarouselItem key={product.id} className="relative flex items-center justify-center h-[300px] md:h-[400px]">
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
                 className="object-cover w-full h-full rounded-lg"
